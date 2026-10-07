@@ -1,0 +1,10 @@
+{
+ "vrfId": 0,
+ "vrfName": "default",
+ "tableVersion": 2,
+ "routerId": "10.0.0.1",
+ "defaultLocPrf": 100,
+ "localAS": 65001,
+ "routes": { "10.10.0.0/16": [{"valid":true,"bestpath":true,"selectionReason":"AS Path","pathFrom":"external","prefix":"10.10.0.0","prefixLen":16,"network":"10.10.0.0/16","version":2,"metric":0,"weight":0,"peerId":"10.0.0.2","path":"65010","origin":"IGP","nexthops":[{"ip":"10.0.0.2","hostname":"enterprise","afi":"ipv4","used":true}]},{"valid":true,"pathFrom":"external","prefix":"10.10.0.0","prefixLen":16,"network":"10.10.0.0/16","version":2,"weight":0,"peerId":"10.0.2.2","path":"65002 65010","origin":"IGP","nexthops":[{"ip":"10.0.2.2","hostname":"isp2","afi":"ipv4","used":true}]}]
+ } , "totalRoutes": 1, "totalPaths": 2,"numRoutes":1
+ } 
