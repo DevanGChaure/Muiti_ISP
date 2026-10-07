@@ -1,0 +1,27 @@
+name: bgp-basic
+
+topology:
+  nodes:
+    isp1:
+      kind: linux
+      image: quay.io/frrouting/frr:10.7.0
+      binds:
+        - ../routers/daemons:/etc/frr/daemons
+        - ../routers/isp1/frr.conf:/etc/frr/frr.conf
+      exec:
+        - ip addr add 10.0.0.1/30 dev eth1
+        - touch /etc/frr/vtysh.conf
+
+    enterprise:
+      kind: linux
+      image: quay.io/frrouting/frr:10.7.0
+      binds:
+        - ../routers/daemons:/etc/frr/daemons
+        - ../routers/enterprise/frr.conf:/etc/frr/frr.conf
+      exec:
+        - ip addr add 10.0.0.2/30 dev eth1
+        - ip addr add 10.10.0.1/16 dev lo
+        - touch /etc/frr/vtysh.conf
+
+  links:
+    - endpoints: ["isp1:eth1", "enterprise:eth1"]
