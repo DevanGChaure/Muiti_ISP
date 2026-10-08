@@ -6,7 +6,7 @@
       "prefix": "clab",
       "mgmt": {
         "network": "clab",
-        "bridge": "br-b384c90c14b6",
+        "bridge": "br-3b0d335148bb",
         "ipv4-subnet": "172.20.20.0/24",
         "ipv4-gw": "172.20.20.1",
         "ipv6-subnet": "3fff:172:20:20::/64",
@@ -28,13 +28,13 @@
       "image": "quay.io/frrouting/frr:10.7.0",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.6",
+      "mgmt-ipv4-address": "172.20.20.2",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::6",
+      "mgmt-ipv6-address": "3fff:172:20:20::2",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-b384c90c14b6",
+        "clab-mgmt-net-bridge": "br-3b0d335148bb",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/home/kali/secure-enterprise-network/topology/clab-bgp-multi/attacker",
@@ -48,8 +48,39 @@
       "port-bindings": [
       ]
     },
-    "client": {
+    "br-ent-lan": {
       "index": "1",
+      "shortname": "br-ent-lan",
+      "longname": "clab-bgp-multi-br-ent-lan",
+      "fqdn": "br-ent-lan.bgp-multi.io",
+      "group": "",
+      "labdir": "/home/kali/secure-enterprise-network/topology/clab-bgp-multi/br-ent-lan",
+      "kind": "bridge",
+      "image": "",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "",
+      "mgmt-ipv4-prefix-length": 0,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-3b0d335148bb",
+        "clab-node-group": "",
+        "clab-node-kind": "bridge",
+        "clab-node-lab-dir": "/home/kali/secure-enterprise-network/topology/clab-bgp-multi/br-ent-lan",
+        "clab-node-longname": "clab-bgp-multi-br-ent-lan",
+        "clab-node-name": "br-ent-lan",
+        "clab-node-type": "",
+        "clab-owner": "kali",
+        "clab-topo-file": "/home/kali/secure-enterprise-network/topology/bgp-multi.clab.yml",
+        "containerlab": "bgp-multi"
+      },
+      "port-bindings": [
+      ]
+    },
+    "client": {
+      "index": "2",
       "shortname": "client",
       "longname": "clab-bgp-multi-client",
       "fqdn": "client.bgp-multi.io",
@@ -59,13 +90,13 @@
       "image": "quay.io/frrouting/frr:10.7.0",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.5",
+      "mgmt-ipv4-address": "172.20.20.8",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::5",
+      "mgmt-ipv6-address": "3fff:172:20:20::8",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-b384c90c14b6",
+        "clab-mgmt-net-bridge": "br-3b0d335148bb",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/home/kali/secure-enterprise-network/topology/clab-bgp-multi/client",
@@ -79,8 +110,101 @@
       "port-bindings": [
       ]
     },
+    "client1": {
+      "index": "3",
+      "shortname": "client1",
+      "longname": "clab-bgp-multi-client1",
+      "fqdn": "client1.bgp-multi.io",
+      "group": "",
+      "labdir": "/home/kali/secure-enterprise-network/topology/clab-bgp-multi/client1",
+      "kind": "linux",
+      "image": "alpine:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.7",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::7",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-3b0d335148bb",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/kali/secure-enterprise-network/topology/clab-bgp-multi/client1",
+        "clab-node-longname": "clab-bgp-multi-client1",
+        "clab-node-name": "client1",
+        "clab-node-type": "",
+        "clab-owner": "kali",
+        "clab-topo-file": "/home/kali/secure-enterprise-network/topology/bgp-multi.clab.yml",
+        "containerlab": "bgp-multi"
+      },
+      "port-bindings": [
+      ]
+    },
+    "client2": {
+      "index": "4",
+      "shortname": "client2",
+      "longname": "clab-bgp-multi-client2",
+      "fqdn": "client2.bgp-multi.io",
+      "group": "",
+      "labdir": "/home/kali/secure-enterprise-network/topology/clab-bgp-multi/client2",
+      "kind": "linux",
+      "image": "alpine:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.5",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::5",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-3b0d335148bb",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/kali/secure-enterprise-network/topology/clab-bgp-multi/client2",
+        "clab-node-longname": "clab-bgp-multi-client2",
+        "clab-node-name": "client2",
+        "clab-node-type": "",
+        "clab-owner": "kali",
+        "clab-topo-file": "/home/kali/secure-enterprise-network/topology/bgp-multi.clab.yml",
+        "containerlab": "bgp-multi"
+      },
+      "port-bindings": [
+      ]
+    },
+    "dhcp-server": {
+      "index": "5",
+      "shortname": "dhcp-server",
+      "longname": "clab-bgp-multi-dhcp-server",
+      "fqdn": "dhcp-server.bgp-multi.io",
+      "group": "",
+      "labdir": "/home/kali/secure-enterprise-network/topology/clab-bgp-multi/dhcp-server",
+      "kind": "linux",
+      "image": "enterprise-dhcp:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::3",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-3b0d335148bb",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/kali/secure-enterprise-network/topology/clab-bgp-multi/dhcp-server",
+        "clab-node-longname": "clab-bgp-multi-dhcp-server",
+        "clab-node-name": "dhcp-server",
+        "clab-node-type": "",
+        "clab-owner": "kali",
+        "clab-topo-file": "/home/kali/secure-enterprise-network/topology/bgp-multi.clab.yml",
+        "containerlab": "bgp-multi"
+      },
+      "port-bindings": [
+      ]
+    },
     "enterprise": {
-      "index": "2",
+      "index": "6",
       "shortname": "enterprise",
       "longname": "clab-bgp-multi-enterprise",
       "fqdn": "enterprise.bgp-multi.io",
@@ -90,13 +214,13 @@
       "image": "quay.io/frrouting/frr:10.7.0",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.4",
+      "mgmt-ipv4-address": "172.20.20.6",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::4",
+      "mgmt-ipv6-address": "3fff:172:20:20::6",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-b384c90c14b6",
+        "clab-mgmt-net-bridge": "br-3b0d335148bb",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/home/kali/secure-enterprise-network/topology/clab-bgp-multi/enterprise",
@@ -111,7 +235,7 @@
       ]
     },
     "isp1": {
-      "index": "3",
+      "index": "7",
       "shortname": "isp1",
       "longname": "clab-bgp-multi-isp1",
       "fqdn": "isp1.bgp-multi.io",
@@ -121,13 +245,13 @@
       "image": "quay.io/frrouting/frr:10.7.0",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-address": "172.20.20.4",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::3",
+      "mgmt-ipv6-address": "3fff:172:20:20::4",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-b384c90c14b6",
+        "clab-mgmt-net-bridge": "br-3b0d335148bb",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/home/kali/secure-enterprise-network/topology/clab-bgp-multi/isp1",
@@ -142,7 +266,7 @@
       ]
     },
     "isp2": {
-      "index": "4",
+      "index": "8",
       "shortname": "isp2",
       "longname": "clab-bgp-multi-isp2",
       "fqdn": "isp2.bgp-multi.io",
@@ -152,13 +276,13 @@
       "image": "quay.io/frrouting/frr:10.7.0",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-address": "172.20.20.9",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "3fff:172:20:20::2",
+      "mgmt-ipv6-address": "3fff:172:20:20::9",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-b384c90c14b6",
+        "clab-mgmt-net-bridge": "br-3b0d335148bb",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/home/kali/secure-enterprise-network/topology/clab-bgp-multi/isp2",
@@ -179,13 +303,13 @@
         "a": {
           "node": "isp1",
           "interface": "eth1",
-          "mac": "aa:c1:ab:bd:f1:29",
+          "mac": "aa:c1:ab:e0:5e:46",
           "peer": "z"
         },
         "z": {
           "node": "enterprise",
           "interface": "eth1",
-          "mac": "aa:c1:ab:79:b4:d4",
+          "mac": "aa:c1:ab:ce:be:2a",
           "peer": "a"
         }
       }
@@ -195,13 +319,13 @@
         "a": {
           "node": "isp2",
           "interface": "eth1",
-          "mac": "aa:c1:ab:3b:19:9b",
+          "mac": "aa:c1:ab:e5:dc:0c",
           "peer": "z"
         },
         "z": {
           "node": "enterprise",
           "interface": "eth2",
-          "mac": "aa:c1:ab:7d:73:2d",
+          "mac": "aa:c1:ab:fc:df:90",
           "peer": "a"
         }
       }
@@ -211,13 +335,13 @@
         "a": {
           "node": "isp1",
           "interface": "eth2",
-          "mac": "aa:c1:ab:97:7c:8c",
+          "mac": "aa:c1:ab:e7:69:8b",
           "peer": "z"
         },
         "z": {
           "node": "isp2",
           "interface": "eth2",
-          "mac": "aa:c1:ab:eb:ba:45",
+          "mac": "aa:c1:ab:9f:53:b3",
           "peer": "a"
         }
       }
@@ -227,13 +351,13 @@
         "a": {
           "node": "isp2",
           "interface": "eth3",
-          "mac": "aa:c1:ab:e7:42:6b",
+          "mac": "aa:c1:ab:b9:22:a9",
           "peer": "z"
         },
         "z": {
           "node": "attacker",
           "interface": "eth1",
-          "mac": "aa:c1:ab:93:e4:e9",
+          "mac": "aa:c1:ab:0c:fd:03",
           "peer": "a"
         }
       }
@@ -243,13 +367,77 @@
         "a": {
           "node": "isp1",
           "interface": "eth3",
-          "mac": "aa:c1:ab:e1:54:2f",
+          "mac": "aa:c1:ab:31:d6:a8",
           "peer": "z"
         },
         "z": {
           "node": "client",
           "interface": "eth1",
-          "mac": "aa:c1:ab:96:46:40",
+          "mac": "aa:c1:ab:27:c5:58",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "enterprise",
+          "interface": "eth3",
+          "mac": "aa:c1:ab:e7:88:73",
+          "peer": "z"
+        },
+        "z": {
+          "node": "br-ent-lan",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:46:ab:5f",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "dhcp-server",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:63:a9:5c",
+          "peer": "z"
+        },
+        "z": {
+          "node": "br-ent-lan",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:eb:65:7d",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "client1",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:ee:75:fe",
+          "peer": "z"
+        },
+        "z": {
+          "node": "br-ent-lan",
+          "interface": "eth3",
+          "mac": "aa:c1:ab:b2:82:3f",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "client2",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:96:81:dc",
+          "peer": "z"
+        },
+        "z": {
+          "node": "br-ent-lan",
+          "interface": "eth4",
+          "mac": "aa:c1:ab:44:43:8d",
           "peer": "a"
         }
       }

@@ -36,6 +36,7 @@ topology:
         - ip addr add 10.0.0.2/30 dev eth1
         - ip addr add 10.0.1.2/30 dev eth2
         - ip addr add 10.10.0.1/16 dev lo
+        - ip addr add 10.10.0.254/24 dev eth3
         - touch /etc/frr/vtysh.conf
 
     attacker:
@@ -59,9 +60,32 @@ topology:
         - ip addr add 198.51.100.1/24 dev lo
         - touch /etc/frr/vtysh.conf
 
+    br-ent-lan:
+        kind: bridge
+
+    dhcp-server:
+      kind: linux
+      image: enterprise-dhcp:latest
+      exec:
+        - ip addr add 10.10.0.2/24 dev eth1
+
+    client1:
+      kind: linux
+      image: alpine:latest
+      cmd: sleep infinity
+
+    client2:
+      kind: linux
+      image: alpine:latest
+      cmd: sleep infinity
+
   links:
     - endpoints: ["isp1:eth1", "enterprise:eth1"]
     - endpoints: ["isp2:eth1", "enterprise:eth2"]
     - endpoints: ["isp1:eth2", "isp2:eth2"]
     - endpoints: ["isp2:eth3", "attacker:eth1"]
     - endpoints: ["isp1:eth3", "client:eth1"]
+    - endpoints: ["enterprise:eth3", "br-ent-lan:eth1"]
+    - endpoints: ["dhcp-server:eth1", "br-ent-lan:eth2"]
+    - endpoints: ["client1:eth1", "br-ent-lan:eth3"]
+    - endpoints: ["client2:eth1", "br-ent-lan:eth4"]

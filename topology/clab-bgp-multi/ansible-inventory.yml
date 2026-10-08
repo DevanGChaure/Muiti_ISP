@@ -5,15 +5,25 @@ all:
     # module does not attempt using any global http proxy.
     ansible_httpapi_use_proxy: false
   children:
+    bridge:
+      hosts:
+        clab-bgp-multi-br-ent-lan:
+          ansible_host: 
     linux:
       hosts:
         clab-bgp-multi-attacker:
-          ansible_host: 172.20.20.6
-        clab-bgp-multi-client:
-          ansible_host: 172.20.20.5
-        clab-bgp-multi-enterprise:
-          ansible_host: 172.20.20.4
-        clab-bgp-multi-isp1:
-          ansible_host: 172.20.20.3
-        clab-bgp-multi-isp2:
           ansible_host: 172.20.20.2
+        clab-bgp-multi-client:
+          ansible_host: 172.20.20.8
+        clab-bgp-multi-client1:
+          ansible_host: 172.20.20.7
+        clab-bgp-multi-client2:
+          ansible_host: 172.20.20.5
+        clab-bgp-multi-dhcp-server:
+          ansible_host: 172.20.20.3
+        clab-bgp-multi-enterprise:
+          ansible_host: 172.20.20.6
+        clab-bgp-multi-isp1:
+          ansible_host: 172.20.20.4
+        clab-bgp-multi-isp2:
+          ansible_host: 172.20.20.9

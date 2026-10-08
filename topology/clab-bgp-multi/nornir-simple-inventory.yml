@@ -1,26 +1,46 @@
 ---
+br-ent-lan:
+    username: 
+    password: 
+    platform: bridge
+    hostname: 
 attacker:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.6
+    hostname: 172.20.20.2
 client:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.5
-enterprise:
+    hostname: 172.20.20.8
+client1:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.4
-isp1:
+    hostname: 172.20.20.7
+client2:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.5
+dhcp-server:
     username: 
     password: 
     platform: linux
     hostname: 172.20.20.3
+enterprise:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.6
+isp1:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.4
 isp2:
     username: 
     password: 
     platform: linux
-    hostname: 172.20.20.2
+    hostname: 172.20.20.9
