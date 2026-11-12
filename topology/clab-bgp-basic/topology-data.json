@@ -1,0 +1,101 @@
+{
+  "name": "bgp-basic",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-69034f2dd921",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "3fff:172:20:20::/64",
+        "ipv6-gw": "3fff:172:20:20::1",
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": [],
+  "nodes": {
+    "enterprise": {
+      "index": "0",
+      "shortname": "enterprise",
+      "longname": "clab-bgp-basic-enterprise",
+      "fqdn": "enterprise.bgp-basic.io",
+      "group": "",
+      "labdir": "/home/kali/secure-enterprise-network/topology/clab-bgp-basic/enterprise",
+      "kind": "linux",
+      "image": "quay.io/frrouting/frr:10.7.0",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::2",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-69034f2dd921",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/kali/secure-enterprise-network/topology/clab-bgp-basic/enterprise",
+        "clab-node-longname": "clab-bgp-basic-enterprise",
+        "clab-node-name": "enterprise",
+        "clab-node-type": "",
+        "clab-owner": "kali",
+        "clab-topo-file": "/home/kali/secure-enterprise-network/topology/bgp-basic.clab.yml",
+        "containerlab": "bgp-basic"
+      },
+      "port-bindings": [
+      ]
+    },
+    "isp1": {
+      "index": "1",
+      "shortname": "isp1",
+      "longname": "clab-bgp-basic-isp1",
+      "fqdn": "isp1.bgp-basic.io",
+      "group": "",
+      "labdir": "/home/kali/secure-enterprise-network/topology/clab-bgp-basic/isp1",
+      "kind": "linux",
+      "image": "quay.io/frrouting/frr:10.7.0",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::3",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-69034f2dd921",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/kali/secure-enterprise-network/topology/clab-bgp-basic/isp1",
+        "clab-node-longname": "clab-bgp-basic-isp1",
+        "clab-node-name": "isp1",
+        "clab-node-type": "",
+        "clab-owner": "kali",
+        "clab-topo-file": "/home/kali/secure-enterprise-network/topology/bgp-basic.clab.yml",
+        "containerlab": "bgp-basic"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "endpoints": {
+        "a": {
+          "node": "isp1",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:c0:12:46",
+          "peer": "z"
+        },
+        "z": {
+          "node": "enterprise",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:e0:5a:23",
+          "peer": "a"
+        }
+      }
+    }
+  ]
+}

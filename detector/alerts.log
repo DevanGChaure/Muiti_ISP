@@ -1,0 +1,51 @@
+[2026-10-09 06:22:47] Detector started — watching clab-bgp-multi-isp1 for 10.10.0.0/16
+[2026-10-09 06:22:47] Baseline: {'10.10.0.0/16': 65010}
+[2026-10-09 06:22:47] [ALERT] Unauthorized prefix inside 10.10.0.0/16: 10.10.0.0/24 originated by AS65099
+[2026-10-09 06:22:50] [ALERT] Unauthorized prefix inside 10.10.0.0/16: 10.10.0.0/24 originated by AS65099
+[2026-10-09 06:22:52] Detector stopped.
+[2026-10-09 06:23:02] Detector started — watching clab-bgp-multi-isp1 for 10.10.0.0/16
+[2026-10-09 06:23:02] Baseline: {'10.10.0.0/16': 65010}
+[2026-10-09 06:23:11] Detector stopped.
+[2026-10-09 06:23:17] Detector started — watching clab-bgp-multi-isp1 for 10.10.0.0/16
+[2026-10-09 06:23:17] Baseline: {'10.10.0.0/16': 65010}
+[2026-10-09 06:23:18] [ALERT] Unauthorized prefix inside 10.10.0.0/16: 10.10.0.0/24 originated by AS65099
+[2026-10-09 06:23:21] [ALERT] Unauthorized prefix inside 10.10.0.0/16: 10.10.0.0/24 originated by AS65099
+[2026-10-09 06:23:24] Detector stopped.
+[2026-10-09 06:23:32] Detector started — watching clab-bgp-multi-isp1 for 10.10.0.0/16
+[2026-10-09 06:23:32] Baseline: {'10.10.0.0/16': 65010}
+[2026-10-09 06:23:32] [ALERT] Unauthorized prefix inside 10.10.0.0/16: 10.10.0.0/24 originated by AS65099
+[2026-10-09 06:23:35] [ALERT] Unauthorized prefix inside 10.10.0.0/16: 10.10.0.0/24 originated by AS65099
+[2026-10-09 06:23:38] Detector stopped.
+[2026-10-09 06:24:36] Detector started — watching clab-bgp-multi-isp1 for 10.10.0.0/16
+[2026-10-09 06:24:36] Baseline: {'10.10.0.0/16': 65010}
+[2026-10-09 06:24:37] [ALERT] Unauthorized prefix inside 10.10.0.0/16: 10.10.0.0/24 originated by AS65099
+[2026-10-09 06:24:39] Detector stopped.
+[2026-10-09 06:26:19] Detector started — watching ['clab-bgp-multi-isp1', 'clab-bgp-multi-isp2'] for 10.10.0.0/16
+[2026-10-09 06:26:19] Baseline: {'10.10.0.0/16': 65010}
+[2026-10-09 06:26:50] [ALERT] [clab-bgp-multi-isp1] Unauthorized prefix inside 10.10.0.0/16: 10.10.0.0/24 originated by AS65099
+[2026-10-09 06:26:50] [ALERT] [clab-bgp-multi-isp2] Unauthorized prefix inside 10.10.0.0/16: 10.10.0.0/24 originated by AS65099
+[2026-10-09 06:27:06] [clab-bgp-multi-isp1] Cleared: 10.10.0.0/24 back to normal
+[2026-10-09 06:27:06] [clab-bgp-multi-isp2] Cleared: 10.10.0.0/24 back to normal
+[2026-10-09 06:27:26] [ALERT] [clab-bgp-multi-isp1] Unauthorized prefix inside 10.10.0.0/16: 10.10.0.0/24 originated by AS65099
+[2026-10-09 06:27:26] [ALERT] [clab-bgp-multi-isp2] Unauthorized prefix inside 10.10.0.0/16: 10.10.0.0/24 originated by AS65099
+[2026-10-09 06:27:59] [clab-bgp-multi-isp1] Cleared: 10.10.0.0/24 back to normal
+[2026-10-09 06:28:00] [clab-bgp-multi-isp2] Cleared: 10.10.0.0/24 back to normal
+[2026-10-09 06:28:01] Detector stopped.
+[2026-10-12 04:48:03] Detector started — watching ['clab-bgp-multi-isp1', 'clab-bgp-multi-isp2'] for 10.10.0.0/16
+[2026-10-12 04:48:03] Baseline: {'10.10.0.0/16': 65010}
+[2026-10-12 04:48:04] [ALERT] [clab-bgp-multi-isp1] Unauthorized prefix inside 10.10.0.0/16: 10.10.0.0/24 originated by AS65099
+[2026-10-12 04:48:04] [ALERT] [clab-bgp-multi-isp2] Unauthorized prefix inside 10.10.0.0/16: 10.10.0.0/24 originated by AS65099
+[2026-10-12 04:48:34] Detector stopped.
+[2026-10-12 04:48:49] Detector started — watching ['clab-bgp-multi-isp1', 'clab-bgp-multi-isp2'] for 10.10.0.0/16
+[2026-10-12 04:48:49] Baseline: {'10.10.0.0/16': 65010}
+[2026-10-12 04:48:59] Detector stopped.
+[2026-10-12 04:49:36] Detector started — watching ['clab-bgp-multi-isp1', 'clab-bgp-multi-isp2'] for 10.10.0.0/16
+[2026-10-12 04:49:36] Baseline: {'10.10.0.0/16': 65010}
+[2026-10-12 04:49:37] [ALERT] [clab-bgp-multi-isp1] Unauthorized prefix inside 10.10.0.0/16: 10.10.0.0/24 originated by AS65099
+[2026-10-12 04:49:37] [ALERT] [clab-bgp-multi-isp2] Unauthorized prefix inside 10.10.0.0/16: 10.10.0.0/24 originated by AS65099
+[2026-10-12 04:49:41] Detector stopped.
+[2026-10-19 04:43:52] Detector started — watching ['clab-bgp-multi-isp1', 'clab-bgp-multi-isp2'] for 10.10.0.0/16
+[2026-10-19 04:43:52] Baseline: {'10.10.0.0/16': 65010}
+[2026-10-19 04:43:53] [ALERT] [clab-bgp-multi-isp1] Unauthorized prefix inside 10.10.0.0/16: 10.10.0.0/24 originated by AS65099
+[2026-10-19 04:43:53] [ALERT] [clab-bgp-multi-isp2] Unauthorized prefix inside 10.10.0.0/16: 10.10.0.0/24 originated by AS65099
+[2026-10-19 04:44:05] Detector stopped.
