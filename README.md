@@ -16,13 +16,6 @@ The goal is to show, end to end, how a routing-layer attack works, how it affect
 
 ## Topology
 
-Client (AS65201) ── ISP1 (AS65001) ──────── ISP2 (AS65002) ──────── Attacker (AS65099)
-198.51.100.0/24 │ │
-└──── Enterprise (AS65010) ──┘
-10.10.0.0/16
-│
-LAN: DHCP server + 2 hosts (10.10.0.0/24)
-
 | Router | AS | Role |
 |---|---|---|
 | ISP1 | 65001 | Transit provider |
@@ -57,30 +50,6 @@ LAN: DHCP server + 2 hosts (10.10.0.0/24)
 - [Containerlab](https://containerlab.dev/)
 - Python 3
 - A Linux host (tested on Kali Linux)
-
----
-
-## Project Structure
-secure-enterprise-network/
-├── topology/
-│ └── bgp-multi.clab.yml # Full lab topology definition
-├── routers/
-│ ├── isp1/frr.conf
-│ ├── isp2/frr.conf
-│ ├── enterprise/frr.conf
-│ ├── attacker/frr.conf
-│ ├── client/frr.conf
-│ └── daemons # Shared FRR daemon config
-├── dhcp-server/
-│ └── dhcp_server.cpp # Custom DHCP server (C++)
-├── detector/
-│ ├── detector.py # BGP hijack detector
-│ ├── respond.py # Automated incident response
-│ └── alerts.log # Detector output log
-├── attack.sh # Attack control script
-├── demo.sh # Scripted end-to-end demo
-└── captures/ # Saved .pcap files (evidence)
-
 
 ---
 
